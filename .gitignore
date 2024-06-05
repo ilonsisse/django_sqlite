@@ -1,0 +1,5 @@
+.idea/
+djvenv/
+**/__pycache__/
+.DS_Store
+
