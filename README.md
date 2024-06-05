@@ -30,16 +30,21 @@
 
     __Примеры фильтров__: 
     > Women.objects.filter(title='Энн Хэтэуэй')
-    Women.objects.filter(title__contains='ли') 
+
+    >Women.objects.filter(title__contains='ли') 
 
       __Изменение записи__:
     > wu = Women.objects.get(pk=2)
+    
     > wu.title = 'Марго Робби'
+
     > wu.content = 'Биография Марго Робби'
+
     > wu.save()
 
     __Удаление записи__:
     > wd = Women.objects.filter(pk__gte=5)
+
     > wd.delete()
 14. Выходим из shell_plus:
     > exit()
