@@ -1,5 +1,6 @@
+# Примечание
 **README.md удалить перед видео!!**
-
+# Алгоритм
 1. Качаем Python: https://www.python.org/downloads/
 2. При установке добавляем галочку в PATH
 3. Если команда pip в терминале все равно не работает, то загружаем отсюда: https://disk.yandex.ru/d/E4wGXGnRhlw3Hw . Далее заходим в терминал и пишем 
@@ -11,7 +12,7 @@
    > Windows: .\djvenv\Scripts\activate
 
    > macOS и Linux: source djvenv/bin/activate
-7. Далее вводим 
+7. Далее вводим и перегазгружаем PyCharm
    > pip install -r requirements.txt
 8. Помечаем корневую папку со всеми файлами как sources root в PyCharm: ПКМ на корневую папку -> в самом низу Mark directory as -> Sources root
 9. Абсолютно не понимаю почему, но чтобы запустить проект, делаем так:
@@ -21,21 +22,24 @@
     
 10. Закрываем окно конфигураций
 11. Выбираем из конфигураций вверху справа возле кнопки запустить конфигурацию migrate. Потом нажимаем запустить
-12. Затем выбираем конфигурацию shell и запускаем
-13. (Вводим в командную строку по одной команде: 
-    > from women.models import Women
-
-    > Women(title='Анджелика Джоли', content='Биография Анджелины Джоли')
-
-    > w1 = _
-
-    > w1.save()
-
-    > from django.db import connection
-
-    > connection.queries
-
-    > exit()
+12. Затем выбираем конфигурацию shell_plus и запускаем
+13. Вводим в командую строку:
     
-    **Примечание**: возможно, нужно потом будет просто вводить from women.models import Women, w1, from django.db import connection, connection.queries)
-14. 
+    __Вывести все объекты__:
+    > Women.objects.all()  
+
+    __Примеры фильтров__: 
+    > Women.objects.filter(title='Энн Хэтэуэй')
+    Women.objects.filter(title__contains='ли') 
+
+      __Изменение записи__:
+    > wu = Women.objects.get(pk=2)
+    > wu.title = 'Марго Робби'
+    > wu.content = 'Биография Марго Робби'
+    > wu.save()
+
+    __Удаление записи__:
+    > wd = Women.objects.filter(pk__gte=5)
+    > wd.delete()
+14. Выходим из shell_plus:
+    > exit()
