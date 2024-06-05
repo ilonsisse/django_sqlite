@@ -16,7 +16,7 @@
    > pip install -r requirements.txt
 8. Помечаем корневую папку со всеми файлами как sources root в PyCharm: ПКМ на корневую папку -> в самом низу Mark directory as -> Sources root
 9. Абсолютно не понимаю почему, но чтобы запустить проект, делаем так:
-    > Вверху справа перед кнопкой запустить есть кнопка current file. Нажимаем и проваливаемся в edit configurations -> add a new configuration -> python -> создаем 4 конфигурации как на скринах: runserver, migrate, makemigrations, shell. Самое главное там выбрать интерпретатор Python из djvenv, указать путь к manage.py и script parameters написать правильное слово
+    > Вверху справа перед кнопкой запустить есть кнопка current file. Нажимаем и проваливаемся в edit configurations -> add a new configuration -> python -> создаем 5 конфигураций как на скринах: runserver, migrate, makemigrations, shell, shell_plus. Самое главное там выбрать интерпретатор Python из djvenv, указать путь к manage.py и script parameters написать правильное слово
     
    > Скрины: https://disk.yandex.ru/d/giPavHIDh8Br0A
     
